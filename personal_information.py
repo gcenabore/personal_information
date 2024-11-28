@@ -65,5 +65,10 @@ def collect_information():
         weight = input("Enter your weight in Kg: ")
 
         height = input("Enter your height in cm: ")
+    
+        another_entry = input("Do you want to enter another person? (Yes/No): ").strip().lower()
+        if another_entry != "yes":
+            break
+
 
 collect_information() 
