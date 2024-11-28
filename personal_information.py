@@ -1,6 +1,8 @@
 from datetime import datetime
 
 def collect_information():
+    def validate_email(email):
+        return "@" in email and "." in email
 
     while True:
         
@@ -30,16 +32,18 @@ def collect_information():
                         
             while True:
                 phone_number = input("Please enter your Phone number: ")
-                number = int(phone_number)
 
-                if len(phone_number) == 11:
+                if phone_number.isdigit() and len(phone_number) == 11:
+                    number = int(phone_number)
                     break
                 else:
                     print("Invalid: type a valid phone number (11 digits).")
 
+            email = input("Please enter your email: ")
+            while not validate_email(email):
+                print("Invalid format. Please try again.")
+                email = input("Enter email: ")
             
-            # email = input("Please enter your email: ")
-
             # nationality = input("Enter your nationality: ")
             # complexion = input("Enter your complexion: ")
             # blood_type = input("Enter your blood type: ")
