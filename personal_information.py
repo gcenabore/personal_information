@@ -80,6 +80,7 @@ def collect_information():
             file.write(f"Age: {age}\n")
             file.write(f"Birthday: {date_of_birth}\n")
             file.write(f"Phone number: {phone_number}\n")
+            file.write(f"Address: {address}\n")
             file.write(f"email: {email}\n")
             file.write(f"Nationality: {nationality}\n")
             file.write(f"Complexion: {complexion}\n")
