@@ -7,7 +7,14 @@ def collect_information():
         surname = input("Please enter your Surname: ")
         age = input("Please enter your Age: ")
         date_of_birth = input("Please enter your Birth date: ")
-        phone_number = input("Please enter your Phone number: ")
+
+        while True:
+            phone_number = input("Please enter your Phone number: ")
+
+            if len(phone_number) != 11:
+                print("Invalid: type a valid phone number (11 digits).")
+                break
+    
         email = input("Please enter your email: ")
 
         nationality = input("Enter your nationality: ")
@@ -15,7 +22,5 @@ def collect_information():
         blood_type = input("Enter your blood type: ")
         weight = input("Enter your weight in Kg: ")
         height = input("Enter your height in cm: ")
-
-
 
 collect_information()
