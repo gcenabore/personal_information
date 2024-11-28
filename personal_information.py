@@ -16,7 +16,7 @@ def collect_information():
             first_name = input("Please enter your First Name: ")
             surname = input("Please enter your Surname: ")
 
-            full_name = first_name + surname
+            full_name = first_name + " " + surname
 
             while True:
                 age = input("Please enter your Age: ")
