@@ -3,6 +3,8 @@ from datetime import datetime
 def collect_information():
     def validate_email(email):
         return "@" in email and "." in email
+    
+    valid_skin_tone = ["Fair skin", "Medium skin", "Light brown skin", "Brown skin", "Black skin"]
 
     while True:
         
@@ -44,10 +46,18 @@ def collect_information():
                 print("Invalid format. Please try again.")
                 email = input("Enter email: ")
             
-            # nationality = input("Enter your nationality: ")
-            # complexion = input("Enter your complexion: ")
-            # blood_type = input("Enter your blood type: ")
+            nationality = input("Enter your nationality: ")
+
+            while True:
+                complexion = input("Enter your complexion(Fair skin/Medium skin/Light brown skin/Brown skin/Black skin): ")
+                if complexion in valid_skin_tone:
+                    break
+                else:
+                    print("Invalid. Try again.")
+
+            blood_type = input("Enter your blood type: ")
+
             # weight = input("Enter your weight in Kg: ")
             # height = input("Enter your height in cm: ")
 
-collect_information()
+collect_information() 
