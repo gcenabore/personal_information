@@ -57,8 +57,13 @@ def collect_information():
                 while not validate_email(email):
                     print("Invalid format. Please try again.")
                     email = input("Enter email: ")
-                    
-                nationality = input("Enter your nationality: ")
+
+                while True:    
+                    nationality = input("Enter your nationality: ")
+                    if nationality.strip():
+                        break
+                    else:
+                        print("Invalid: Nationality cannot be empty.")
 
                 while True:
                     complexion = input("Enter your complexion (Fair skin/Medium skin/Light brown skin/Brown skin/Black skin): ")
@@ -72,10 +77,20 @@ def collect_information():
                         break
                     else:
                         print("Invalid: Try again. choose a valid blood type (A+/A-/B+/B-/AB+/AB-/O+/O-)")
-                            
-                weight = input("Enter your weight in Kg: ")
 
-                height = input("Enter your height in cm: ")
+                while True:            
+                    weight = input("Enter your weight in Kg: ")
+                    if weight.strip():
+                        break
+                    else:
+                        print("Invalid: weight cannot be empty.")
+
+                while True:
+                    height = input("Enter your height in cm: ")
+                    if height.strip():
+                        break
+                    else:
+                        print("Invalid: Height cannot be empty.")
 
                 file.write(f"Full name: {full_name}\n")
                 file.write(f"Age: {age}\n")
