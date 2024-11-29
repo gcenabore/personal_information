@@ -1,8 +1,12 @@
 
 # !!!code needs more revision, and update.!!!
 
+print("!!!TYPE THE USER'S FIRST NAME AND SURNAME TO ACQUIRE THEIR INFORMATION!!!")
 
-user_name = input("Enter Name to Find information: ")
+first_name = input("Enter First name: ")
+surname = input("Enter Surname: ")
+
+user_name = first_name + " " + surname
 found = False
 
 with open("personal_information.txt", "r") as f:
